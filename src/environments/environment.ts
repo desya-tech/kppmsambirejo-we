@@ -3,9 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  urlpath: 'https://event-kppm-sambirejo-api.herokuapp.com',
-  judul:"judulCoba"
+  production: true,
+  urlpath: 'https://event-kppm-sambirejo-api.herokuapp.com'
 };
 
 /*
