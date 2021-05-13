@@ -375,7 +375,7 @@ body {
   
   <main class="container main" *ngFor="let item of eventByShowType">
     <div class="row">
-        <div class="col-lg-5 col-md-12 col-sm-12">
+        <div class="col-lg-5 col-md-8 col-sm-8">
             <div class="maintext text-white">
                 <h4>{{item.start_event | date:'medium'}}</h4>
                 <h1>{{item.nama_event}}<br>"{{item.tema_event}}"</h1>
@@ -389,7 +389,6 @@ body {
         </div>
         <div class="col-lg-7 col-md-12 col-sm-12">
             <div class="img">
-                <!-- <img src="/assets/img/hero-section-img1.png" alt=""> -->
                 <img src={{item.path}} alt="">
             </div>
         </div>
