@@ -26,7 +26,12 @@
             "styles": [
               "src/styles.css",
               "node_modules/datatables.net-dt/css/jquery.dataTables.css",
-              "node_modules/datatables.net-buttons-dt/css/buttons.dataTables.css"
+              "node_modules/datatables.net-buttons-dt/css/buttons.dataTables.css",
+              "./src/assets/css/bootstrap.css",
+              "./src/assets/css/fontawesome-all.css",
+              "./src/assets/css/swiper.css",
+              "./src/assets/css/magnific-popup.css",
+              "./src/assets/css/styles.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
@@ -36,7 +41,16 @@
               "node_modules/datatables.net-buttons/js/buttons.colVis.js",
               "node_modules/datatables.net-buttons/js/buttons.flash.js",
               "node_modules/datatables.net-buttons/js/buttons.html5.js",
-              "node_modules/datatables.net-buttons/js/buttons.print.js"
+              "node_modules/datatables.net-buttons/js/buttons.print.js",
+              
+              "./src/assets/js/popper.min.js",
+              "./src/assets/js/bootstrap.min.js",
+              "./src/assets/js/jquery.easing.min.js",
+              "./src/assets/js/swiper.min.js",
+              "./src/assets/js/jquery.magnific-popup.js",
+              "./src/assets/js/morphext.min.js",
+              "./src/assets/js/validator.min.js",
+              "./src/assets/js/scripts.js"
             ]
           },
           "configurations": {
