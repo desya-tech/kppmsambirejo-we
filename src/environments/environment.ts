@@ -4,7 +4,9 @@
 
 export const environment = {
   production: true,
-  urlpath: 'https://event-kppm-sambirejo-api.herokuapp.com'
+  // urlpath: 'https://event-kppm-sambirejo-api.herokuapp.com'
+  urlpath: 'http://localhost:3000'
+  
 };
 
 /*
