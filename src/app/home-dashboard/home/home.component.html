@@ -631,6 +631,8 @@
                       </div>
                       <div>
                         Event:
+                        <pre> start_time : {{ modalData?.event.start | date:'medium'}}</pre>
+                        <pre> end_time : {{ modalData?.event.end | date:'medium'}}</pre>
                         <pre>{{ modalData?.event | json }}</pre>
                       </div>
                     </div>

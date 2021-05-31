@@ -110,19 +110,19 @@ export class HomeComponent implements OnInit {
     this.HomeDashboardService.getEventList().subscribe(
       res=>{
         this.eventls = res;
-        console.log("dataaaaaaaaaaaaaaaaaaaaaaaa")
-        console.log(this.eventls)
+        // console.log("dataaaaaaaaaaaaaaaaaaaaaaaa")
+        // console.log(this.eventls)
         this.eventls.forEach(element => {
           let data = {
-            start: new Date(element.start_event),
-            end: new Date(element.end_event),
+            start: new Date(element.start_event.toString().replace('.000Z','')),
+            end: new Date(element.end_event.toString().replace('.000Z','')),
             actions: this.actions,
             title: (element.nama_event+" ("+element.ayat+")"),
             color: colors.blue,
             path: element.path
             }
           this.events.push(data)
-          console.log(this.events,"even tssssssssssss")
+          // console.log(this.events,"even tssssssssssss")
         });
         this.refresh.next();
       }
@@ -200,8 +200,6 @@ export class HomeComponent implements OnInit {
   
 
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
-    console.log("eventls")
-    console.log(this.calenderEvent)
     if (isSameMonth(date, this.viewDate)) {
       if (
         (isSameDay(this.viewDate, date) && this.activeDayIsOpen === true) ||
