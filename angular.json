@@ -42,7 +42,6 @@
               "node_modules/datatables.net-buttons/js/buttons.flash.js",
               "node_modules/datatables.net-buttons/js/buttons.html5.js",
               "node_modules/datatables.net-buttons/js/buttons.print.js",
-              
               "./src/assets/js/popper.min.js",
               "./src/assets/js/bootstrap.min.js",
               "./src/assets/js/jquery.easing.min.js",

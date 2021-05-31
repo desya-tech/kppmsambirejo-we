@@ -11,6 +11,8 @@ id_event: number;
   id_pelayan: number;
   id_tipe_pelaksanaan_event: number;
   id_status: number;
+  path: string;
+  nama_tipe_pelaksanaan: string;
 }
 
   

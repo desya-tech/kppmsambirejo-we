@@ -124,7 +124,9 @@
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#preview">Preview</a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#calendarevent">Calender</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#contact">Contact</a>
                 </li>
@@ -187,26 +189,29 @@
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <div class="card">
-                                        <p class="testimonial-author">Pelayan Ibadah</p>
+                                        <h6 class="testimonial-author">Pelayan Ibadah</h6>
                                         
                                         <img class="card-image" src="assets/images/testimonial-1.jpg" alt="alternative">
                                         <div class="card-body">
-                                            <p class="testimonial-text">"{{item.pesan}}"</p>
-                                            <p class="testimonial-author">{{item.nama_pelayan}} - {{item.jabatan}}</p>
-                                            <p class="testimonial-author">({{item.nama_gereja}})</p>
+                                            <h6 class="testimonial-text">"{{item.pesan}}"</h6>
+                                            <h6 class="testimonial-author">{{item.nama_pelayan}} - {{item.jabatan}}</h6>
+                                            <h6 class="testimonial-author">({{item.nama_gereja}})</h6>
                                         </div>
                                     </div>
                                 </div> <!-- end of swiper-slide -->
                                 <!-- end of slide -->
-                                <!-- Slide -->
+                               <!-- Slide -->
                                 <div class="swiper-slide">
                                     <div class="card">
-                                        <img class="card-image" src="assets/images/testimonial-6.jpg" alt="alternative">
+                                        <h6 class="testimonial-author">Pelayan Ibadah</h6>
+                                        
+                                        <img class="card-image" src="assets/images/testimonial-1.jpg" alt="alternative">
                                         <div class="card-body">
-                                            <p class="testimonial-text">Who would have thought that Leno can provide such amazing results in just a few weeks of use</p>
-                                            <p class="testimonial-author">Ann Black - Developer</p>
+                                            <h6 class="testimonial-text">"{{item.pesan}}"</h6>
+                                            <h6 class="testimonial-author">{{item.nama_pelayan}} - {{item.jabatan}}</h6>
+                                            <h6 class="testimonial-author">({{item.nama_gereja}})</h6>
                                         </div>
-                                    </div>        
+                                    </div>
                                 </div> <!-- end of swiper-slide -->
                                 <!-- end of slide -->
                             
@@ -282,7 +287,7 @@
                                 <div class="col-md-8">
                                     <div class="text-area">
                                         <h3>Beberapa hal yang perlu Diperhatikan</h3>
-                                        <p>{{item.deskripsi_event}}</p>
+                                        <h6>{{item.deskripsi_event}}</h6>
                                     </div> <!-- end of text-area -->
                                     
                                     <div class="icon-cards-area">
@@ -292,7 +297,7 @@
                                                 </div>
                                                 <div class="card-body">
                                                     <h4 class="card-title">Waktu</h4>
-                                                    <p>{{item.start_event | date:'medium'}}</p>
+                                                    <h5>{{item.start_event | date:'medium'}}</h5>
                                                 </div>
                                             </div>
                                             <div class="card">
@@ -352,7 +357,7 @@
 
 
     <!-- Video -->
-    <div id="preview" class="basic-1">
+    <div id="preview" class="basic-1" *ngIf="showOnlineView">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -362,13 +367,13 @@
             </div> <!-- end of row -->
             <div class="row">
                 <div class="col-lg-12">
-
                     <!-- Video Preview -->
                     <div class="image-container">
                         <div class="video-wrapper">
-                            <a class="popup-youtube" href="https://www.youtube.com/watch?v=fLCjQJCekTs" data-effect="fadeIn">
+                            <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/watch?v=orAwEDv5VeM"></iframe> -->
+                            <a class="popup-youtube" href="https://www.youtube.com/watch?v=orAwEDv5VeM" data-effect="fadeIn">
                                 <img class="img-fluid" src="assets/images/video-frame.jpg" alt="alternative">
-                                <span class="video-play-button">
+                                <span class="video-play-button" onclick="change()">
                                     <span></span>
                                 </span>
                             </a>
@@ -444,16 +449,50 @@
     <!-- end of details lightboxes -->
 
     <!-- Statistics -->
-    <div class="counter">
+    <div id="gallery" class="counter">
         <div class="container">
+            <!-- <div class="row">
+                <div class="col-lg-12">
+                    <h2>gallery</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 mb-3">
+                    <img src="https://images.unsplash.com/photo-1423589989400-cc0270157ed0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=a95937ce1dc3243f52c30f86d948b771" alt="" class="fluid img-thumbnail">      
+                  </div>
+                  <div class="col-sm-6 col-md-4 mb-3">
+                    <img src="https://images.unsplash.com/photo-1423589989400-cc0270157ed0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=a95937ce1dc3243f52c30f86d948b771" alt="" class="fluid img-thumbnail">      
+                  </div>
+                  <div class="col-sm-6 col-md-4 mb-3">
+                    <img src="https://images.unsplash.com/photo-1423589989400-cc0270157ed0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=a95937ce1dc3243f52c30f86d948b771" alt="" class="fluid img-thumbnail">      
+                  </div>
+                   <div class="col-sm-6 col-md-4 mb-3">
+                    <img src="https://images.unsplash.com/photo-1423589989400-cc0270157ed0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=a95937ce1dc3243f52c30f86d948b771" alt="" class="fluid img-thumbnail">      
+                  </div>
+                  <div class="col-sm-6 col-md-4 mb-3">
+                    <img src="https://images.unsplash.com/photo-1423589989400-cc0270157ed0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=a95937ce1dc3243f52c30f86d948b771" alt="" class="fluid img-thumbnail">      
+                  </div>
+                  <div class="col-sm-6 col-md-4 mb-3">
+                    <img src="https://images.unsplash.com/photo-1423589989400-cc0270157ed0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=a95937ce1dc3243f52c30f86d948b771" alt="" class="fluid img-thumbnail">      
+                  </div>
+                   <div class="col-sm-6 col-md-4 mb-3">
+                    <img src="https://images.unsplash.com/photo-1423589989400-cc0270157ed0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=a95937ce1dc3243f52c30f86d948b771" alt="" class="fluid img-thumbnail">      
+                  </div>
+                  <div class="col-sm-6 col-md-4 mb-3">
+                    <img src="https://images.unsplash.com/photo-1423589989400-cc0270157ed0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=a95937ce1dc3243f52c30f86d948b771" alt="" class="fluid img-thumbnail">      
+                  </div>
+                  <div class="col-sm-6 col-md-4 mb-3">
+                    <img src="https://images.unsplash.com/photo-1423589989400-cc0270157ed0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=a95937ce1dc3243f52c30f86d948b771" alt="" class="fluid img-thumbnail">      
+                  </div>
+            </div> -->
             <div class="row">
                 <div class="col-lg-12">
                     
                     <!-- Counter -->
-                    <div id="counter">
+                    <div id="counter" *ngIf="countVisitors">
                         <div class="cell">
-                            <div class="counter-value number-count" data-count="231">1</div>
-                            <p class="counter-info">Happy Users</p>
+                            <div class="counter-value number-count">{{countVisitors}}</div>
+                            <p class="counter-info">Visitors</p>
                         </div>
                         <div class="cell">
                             <div class="counter-value number-count" data-count="85">1</div>
@@ -476,6 +515,134 @@
     </div> <!-- end of counter -->
     <!-- end of statistics -->
 
+
+     <!-- Contact -->
+     <div id="calendarevent" class="form">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Calender Event</h2>
+                </div>
+            </div>
+            
+                <div class="row text-center">
+                    <div class="col-md-4">
+                      <div class="btn-group">
+                        <div
+                          class="btn btn-primary"
+                          mwlCalendarPreviousView
+                          [view]="view"
+                          [(viewDate)]="viewDate"
+                          (viewDateChange)="closeOpenMonthViewDay()"
+                        >
+                          Previous
+                        </div>
+                        <div
+                          class="btn btn-outline-secondary"
+                          mwlCalendarToday
+                          [(viewDate)]="viewDate"
+                        >
+                          Today
+                        </div>
+                        <div
+                          class="btn btn-primary"
+                          mwlCalendarNextView
+                          [view]="view"
+                          [(viewDate)]="viewDate"
+                          (viewDateChange)="closeOpenMonthViewDay()"
+                        >
+                          Next
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="btn-group">
+                        <div
+                          class="btn btn-primary"
+                          (click)="setView(CalendarView.Month)"
+                          [class.active]="view === CalendarView.Month"
+                        >
+                          Month
+                        </div>
+                        <div
+                          class="btn btn-primary"
+                          (click)="setView(CalendarView.Week)"
+                          [class.active]="view === CalendarView.Week"
+                        >
+                          Week
+                        </div>
+                        <div
+                          class="btn btn-primary"
+                          (click)="setView(CalendarView.Day)"
+                          [class.active]="view === CalendarView.Day"
+                        >
+                          Day
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <div [ngSwitch]="view">
+                    <mwl-calendar-month-view
+                      *ngSwitchCase="CalendarView.Month"
+                      [viewDate]="viewDate"
+                      [events]="events"
+                      [refresh]="refresh"
+                      [activeDayIsOpen]="activeDayIsOpen"
+                      (dayClicked)="dayClicked($event.day)"
+                      (eventClicked)="handleEvent('Clicked', $event.event)"
+                      (eventTimesChanged)="eventTimesChanged($event)"
+                    >
+                    </mwl-calendar-month-view>
+                    <mwl-calendar-week-view
+                      *ngSwitchCase="CalendarView.Week"
+                      [viewDate]="viewDate"
+                      [events]="events"
+                      [refresh]="refresh"
+                      (eventClicked)="handleEvent('Clicked', $event.event)"
+                      (eventTimesChanged)="eventTimesChanged($event)"
+                    >
+                    </mwl-calendar-week-view>
+                    <mwl-calendar-day-view
+                      *ngSwitchCase="CalendarView.Day"
+                      [viewDate]="viewDate"
+                      [events]="events"
+                      [refresh]="refresh"
+                      (eventClicked)="handleEvent('Clicked', $event.event)"
+                      (eventTimesChanged)="eventTimesChanged($event)"
+                    >
+                    </mwl-calendar-day-view>
+                  </div>
+
+                  <ng-template #modalContent let-close="close">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Event action occurred</h5>
+                      <button type="button" class="close" (click)="close()">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div>
+                        <pre>{{ modalData?.event.path }}</pre>
+                        <img class="img-fluid" src="{{modalData?.event.path}}" alt="alternative">
+                      </div>
+                      <div>
+                        Event:
+                        <pre>{{ modalData?.event | json }}</pre>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-outline-secondary" (click)="close()">
+                        OK
+                      </button>
+                    </div>
+                  </ng-template>
+        </div>
+    </div>
+    <!-- end of contact -->
 
     <!-- Contact -->
     <div id="contact" class="form">
@@ -538,7 +705,7 @@
                 <div class="col-md-4">
                     <div class="footer-col">
                         <h4>About Kppm GKJW Sambirejo</h4>
-                        <p>Pemuda yang memiliki banyak talenta yang tergabung dalam kesatuan GKJW Sambirejo</p>
+                        <h6>Pemuda yang memiliki banyak talenta yang tergabung dalam kesatuan GKJW Sambirejo</h6>
                     </div>
                 </div> <!-- end of col -->
                 <div class="col-md-4">
